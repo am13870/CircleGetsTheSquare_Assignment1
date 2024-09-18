@@ -1,0 +1,140 @@
+body {
+  background-color: #266138;
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth; 
+}
+
+/* menu style */
+.tab {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+  position: fixed;
+  z-index: 100;
+}
+
+/* title of the menu */
+.tab h1 {
+  /* making the font size responsive */
+  font-size: clamp(2.5rem, 5vw, 3rem); 
+  position: absolute;
+  top: -30px;
+}
+
+.tablinks {
+  /* making the font size responsive */
+  font-size: clamp(1rem, 2.5vw, 1.5rem); 
+  font-weight: 600;
+  position: relative;
+  top: 60px;
+  left: -10px;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: #EC7391;
+  color: #cedce0;
+  border-radius: 30px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.tablinks:hover {
+  background-color: #D14266;
+  color: #2D96BC;
+}
+
+.tabcontent {
+  padding: 50px;
+  min-height: 900px;
+}
+
+/* flexbox to make the elements responsive */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* style of the page headings */
+#about h2, #movie h2, #stuff h2 {
+  color: #266138;
+  font-size: clamp(1.5rem, 4vw, 2.5rem); 
+  top: 70px;
+}
+
+h1, h2 {
+  color: #FFBB00;
+  position: relative;
+  transform: translateX(-50%);
+  left: 49.5%;
+  float: left;
+  clear: left;
+}
+
+.yellow-text1, .yellow-text2 {
+  font-size: clamp(1.5rem, 3vw, 2rem); 
+  max-width: 250px;
+  color: #FFBB00;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+}
+
+.yellow-text1 {
+  left: 20%; 
+}
+
+.yellow-text2 {
+  left: 80%; 
+}
+
+/* p5.js container */
+#p5-container {
+  position: relative;
+  display: absolute;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+canvas {
+  position: relative;
+  left: 20%;
+  top: 150px;
+  max-width: 100%; 
+  height: auto;
+}
+
+/* movie positioning and styling */
+.tabcontent iframe {
+  width: 55%;
+  height: 55%;
+  position: absolute;
+  top: 130%;
+  left: 22.5%;
+}
+
+/* movie description text */
+p {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  color: #cedce0;
+  max-width: 850px;
+  position: absolute;
+  top: 187%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+/* carousel caption */
+.pink-text {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: #EC7391;
+  max-width: 600px;
+  position: absolute;
+  top: 285%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}

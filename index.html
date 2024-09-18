@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>circle gets the square</title>
+
+    <!-- adding the p5.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+
+    <!-- adding the Inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    
+    <!-- linking the css file -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- linking the js file -->
+    <script src="script.js"></script>
+
+    <!-- making the content responsive to screen size changes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+
+<!-- the menu buttons -->
+<div class="tab">
+    <h1>circle gets the square</h1>
+
+    <button class="tablinks" onclick="scrollToSection('about')">about</button>
+    <button class="tablinks" onclick="scrollToSection('movie')">movie</button>
+    <button class="tablinks" onclick="scrollToSection('stuff')">stuff</button>
+</div>
+
+<!-- about -->
+<section id="about" class="tabcontent">
+    <h2>about</h2>
+    <div id="p5-container"></div>
+    <p class="yellow-text1">How difficult is it to pay attention to little things? Let's explore the spaces of Arts Center. </p>
+    <p class="yellow-text2">This project was created by Amina Magomedova, a first-year student at NYUAD, for the 30MFF.</p>
+    
+
+</section>
+
+<!-- movie -->
+<section id="movie" class="tabcontent">
+    <h2>movie</h2>
+
+    <iframe width="840" height="472.5" src="https://www.youtube.com/embed/GhU5ch7HrSw?si=JCXFvNy4jmeTyjqQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  
+    <p>“Circle gets the square” is a short movie about a simple thing - circles. Rooms are filled with shapes, but their repetitiveness goes unnoticed. A circle is a symbol of unity and perfection - visual harmony of the Arts Center is supported by it. This movie captures an unexpected occurrence of the ultimate geometric form in the interior space. As the saying goes, the circle gets the square - the idea is not complex, but it provokes the viewer to look around and pay attention to little things.</p>
+</section>
+
+<!-- stuff -->
+<section id="stuff" class="tabcontent">
+    <h2>stuff</h2>
+    <div alt="caution" style="position: absolute; top: 1%; left: 0%; width:200px; height:200px">
+        <img src="circle1.png" style="width: 100%; height: 100%;">
+        <img src="circle2.png" style="width: 100%; height: 100%;">
+        <img src="circle3.png" style="width: 100%; height: 100%;">
+        <img src="circle4.png" style="width: 100%; height: 100%;">
+        <img src="circle5.png" style="width: 100%; height: 100%;">
+        <img src="circle6.png" style="width: 100%; height: 100%;">
+        <img src="circle7.png" style="width: 100%; height: 100%;">
+        <img src="circle8.png" style="width: 100%; height: 100%;">
+        <img src="circle9.png" style="width: 100%; height: 100%;">
+        <img src="circle1.png" style="width: 100%; height: 100%;">
+        <img src="circle2.png" style="width: 100%; height: 100%;">
+        <img src="circle3.png" style="width: 100%; height: 100%;">
+        <img src="circle4.png" style="width: 100%; height: 100%;">
+        <img src="circle5.png" style="width: 100%; height: 100%;">
+        <img src="circle6.png" style="width: 100%; height: 100%;">
+
+    </div>
+
+    <div alt="caution" style="position: absolute; top: 1%; right: 0%; width:200px; height:200px">
+        <img src="circle1.png" style="width: 100%; height: 100%;">
+        <img src="circle2.png" style="width: 100%; height: 100%;">
+        <img src="circle3.png" style="width: 100%; height: 100%;">
+        <img src="circle4.png" style="width: 100%; height: 100%;">
+        <img src="circle5.png" style="width: 100%; height: 100%;">
+        <img src="circle6.png" style="width: 100%; height: 100%;">
+        <img src="circle7.png" style="width: 100%; height: 100%;">
+        <img src="circle8.png" style="width: 100%; height: 100%;">
+        <img src="circle9.png" style="width: 100%; height: 100%;">
+        <img src="circle1.png" style="width: 100%; height: 100%;">
+        <img src="circle2.png" style="width: 100%; height: 100%;">
+        <img src="circle3.png" style="width: 100%; height: 100%;">
+        <img src="circle4.png" style="width: 100%; height: 100%;">
+        <img src="circle5.png" style="width: 100%; height: 100%;">
+        <img src="circle6.png" style="width: 100%; height: 100%;">
+      </div>
+
+      <!-- IMAGE CAROUSEL -->
+
+    <style>
+        /* carousel container */
+        .carousel {
+            width: 100%;
+            max-width: 500px;
+            margin: auto;
+            position: relative;
+            top: 130px;
+            left: -30px;;
+            overflow: hidden;
+        }
+
+        /* settings of the images in the carousel */
+        .carousel img {
+            width: 100%;
+            display: none;
+        }
+
+        /* showing the first image */
+        .carousel img:first-child {
+            display: block;
+        }
+
+        /* navigation buttons */
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0,0,0,0.5);
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="carousel">
+    <img src="circle1.png" alt="Image 1">
+    <img src="circle2.png" alt="Image 2">
+    <img src="circle3.png" alt="Image 3">
+    <img src="circle4.png" alt="Image 4">
+    <img src="circle5.png" alt="Image 5">
+    <img src="circle6.png" alt="Image 6">
+    <img src="circle7.png" alt="Image 7">
+    <img src="circle8.png" alt="Image 8">
+    <img src="circle9.png" alt="Image 9">
+    
+    <button class="prev" onclick="prevSlide()">❮</button>
+    <button class="next" onclick="nextSlide()">❯</button>
+</div>
+
+<script>
+    // setting up the carousel movement
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel img');
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.style.display = (i === index) ? 'block' : 'none';
+        });
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+    }
+</script>
+
+<p class="pink-text">These are some of the objects featured in the video. Can you guess the purpose of each?</p>
